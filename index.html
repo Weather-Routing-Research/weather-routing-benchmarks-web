@@ -4,26 +4,30 @@
     <meta charset="utf-8">
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
-    <meta name="description" content="DESCRIPTION META TAG">
-    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta name="description"
+      content="WeatherRouting Bench 1.0 project page describing its functionalities and results.">
+    <meta property="og:title" content="WeatherRouting Bench 1.0" />
     <meta property="og:description"
-      content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
-    <meta property="og:url" content="URL OF THE WEBSITE" />
+      content="WeatherRouting Bench 1.0 project page describing its functionalities and results." />
+    <meta property="og:url" content="https://weathernavigation.com/" />
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image"
+      content="static/images/android-chrome-512x512.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
+    <!-- TWITTER
     <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
     <meta name="twitter:description"
       content="TWITTER BANNER DESCRIPTION META TAG">
-    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
     <meta name="twitter:image"
       content="static/images/your_twitter_banner_image.png">
     <meta name="twitter:card" content="summary_large_image">
+    -->
+
     <!-- Keywords for your paper to be indexed by-->
     <meta name="keywords"
-      content="WeatherRouting Benchmark Optimization Github">
+      content="weatherrouting benchmark optimization github">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Weather Routing Bench 1.0</title>
@@ -168,7 +172,7 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <img src="static/videos/route-comparison-loop-count.gif"
-            alt="MY ALT TEXT" />
+            alt="Comparison of two routes" />
           <h2 class="subtitle has-text-centered">
             Route from Hamburg (DEHAM) to New York (USNYC)
             during week 6 of 2023, at a sailing speed of 6 knots. The figure
@@ -326,8 +330,36 @@
     </section>
     <!-- End Optimization -->
 
+    <!-- Results -->
+    <section class="hero is-small is-light">
+      <div class="hero-body container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <div class="has-text-centered">
+          <img src="static/images/odp-gain-03.png" alt="results image" />
+        </div>
+        <h2 class="subtitle has-text-justified">
+          <br>
+          The application of the <b>A*-FMS</b> optimization algorithm on
+          <b>WeatherRouting
+            Bench 1.0</b> demonstrated significant improvements in maritime
+          route
+          planning. The algorithm effectively reduced travel time by leveraging
+          detailed meteorological data, including ocean currents and wave
+          models. On average, the <b>A*-FMS</b> algorithm achieved a travel time
+          reduction of 1.4% at a cruising speed of 12 knots and <b>3.6%</b> at 6
+          knots
+          compared to the orthodromic route. The results highlighted the
+          algorithm's robustness across different vessel speeds, ocean regions,
+          and seasonal variations, showcasing its adaptability to various
+          maritime conditions.
+
+        </h2>
+      </div>
+    </section>
+    <!-- End Results -->
+
     <!-- Paper poster -->
-    <section class="hero is-small is-light" id="paper">
+    <section class="hero is-small" id="paper">
       <div class="hero-body">
         <div class="container">
           <!-- TODO: add download link-->
@@ -339,6 +371,29 @@
       </div>
     </section>
     <!--End paper poster -->
+
+    <!-- GitHub -->
+    <section class="hero is-small is-light" id="github">
+      <div class="hero-body">
+        <div class="container has-text-justified">
+          <!-- TODO: add form -->
+          <h2 class="title">GitHub</h2>
+          <p>
+            The code for <b>WeatherRouting Bench 1.0</b> is available on a
+            private repository in GitHub. To obtain access, please send an email
+            to <b><a
+                href="mailto:dprecioso@faculty.ie.edu">dprecioso@faculty.ie.edu</a></b>
+            describing your work and how you plan to use the code.
+            We will review your request and
+            provide access to the
+            repository as soon as possible. Thank you for your interest in our
+            work.
+          </p>
+
+        </div>
+      </div>
+    </section>
+    <!--End GitHub -->
 
     <!--BibTex citation -->
     <section class="section" id="BibTeX">
