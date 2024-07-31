@@ -115,6 +115,16 @@
                   </span>
 
                   <span class="link-block">
+                    <a href="#code"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
                     <a
                       href="https://drive.google.com/file/d/1S2heqdax__h2L6CtDv764nSl6E_1l9m_/view?usp=sharing"
                       target="_blank"
@@ -373,23 +383,100 @@
     <!--End paper poster -->
 
     <!-- GitHub -->
-    <section class="hero is-small is-light" id="github">
+    <section class="hero is-small is-light" id="code">
       <div class="hero-body">
         <div class="container has-text-justified">
           <!-- TODO: add form -->
           <h2 class="title">GitHub</h2>
           <p>
             The code for <b>WeatherRouting Bench 1.0</b> is available on a
-            private repository in GitHub. To obtain access, please send an email
-            to <b><a
-                href="mailto:dprecioso@faculty.ie.edu">dprecioso@faculty.ie.edu</a></b>
-            describing your work and how you plan to use the code.
+            private repository in GitHub.
             We will review your request and
             provide access to the
             repository as soon as possible. Thank you for your interest in our
             work.
           </p>
+          <br>
+          <form id="contact-form">
+            <div class="field">
+              <label class="label" for="name">Name and Surname</label>
+              <div class="control">
+                <input class="input" type="text" id="name" name="name"
+                  placeholder="Your full name" required>
+              </div>
+            </div>
 
+            <div class="field">
+              <label class="label" for="institution">Institution</label>
+              <div class="control">
+                <input class="input" type="text" id="institution"
+                  name="institution" placeholder="Your institution" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="email">Email</label>
+              <div class="control">
+                <input class="input" type="email" id="email" name="email"
+                  placeholder="Your email address" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="github">GitHub Account</label>
+              <div class="control">
+                <input class="input" type="text" id="github" name="github"
+                  placeholder="GitHub account to share the code" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="project">Project or Work</label>
+              <div class="control">
+                <textarea class="textarea" id="project" name="project"
+                  placeholder="Describe the project or work"
+                  required></textarea>
+              </div>
+            </div>
+            <p class="control">
+              <button class="button" type="submit">Send</button>
+            </p>
+          </form>
+          <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              
+              var name = document.getElementById('name').value;
+              var institution = document.getElementById('institution').value;
+              var email = document.getElementById('email').value;
+              var project = document.getElementById('project').value;
+              var github = document.getElementById('github').value;
+              
+              console.log(name, institution, email, project, github);
+
+              var data = {
+                name: name,
+                institution: institution,
+                email: email,
+                project: project,
+                github: github
+              };
+        
+              var xhr = new XMLHttpRequest();
+              xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzqKZDZ5NiUPeCyx377I9tG31R7R3raBJLhSxv16AOAdts54UunGvROFbWjDUy1MMoF/exec'); // Replace with your web app URL
+              xhr.setRequestHeader('Content-Type', "text/plain");
+              
+              xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                  alert('Form submitted successfully!');
+                } else if (xhr.readyState === 4) {
+                  alert('Error in form submission. Please try again.');
+                }
+              };
+              
+              console.log(xhr.send(JSON.stringify(data)));
+            });
+          </script>
         </div>
       </div>
     </section>
